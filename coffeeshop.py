@@ -24,6 +24,30 @@ elif coffee=="Americano":
    price = price + 3
 elif coffee=="Latte":
    price = price + 2.50
+elif coffee=="Cappuccino":
+   price = price + 3
+elif coffee=="Macchiato":
+   price = price + 2.50
+elif coffee=="Mocha":
+   price = price + 3.50
+elif coffee=="Flat White":
+   price = price + 2.50
+
+#velge hvor stor kafen skal være
+Size = input("What size of coffee would you like?")
+if Size=="M":
+   price = price + 0
+elif Size=="L":
+   price = price + 1
+elif Size=="XL":
+   price = price + 1.50
+
+#hvor de vil være
+place = input("Do you want take away?")
+if place=="No":
+   price = price + 0
+elif place=="Yes":
+   price = price + 1
 
 #Complete the code here...
 print("----------------------------")
