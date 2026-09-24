@@ -19,6 +19,7 @@ print("----------------------------")
 price = 0
 #lager en funksjon for at den ikke skal fortsete etter det er invalid option.
 def coffee_type():
+   global price
    coffee = input("What type of coffee would you like?").title()
    if coffee=="Espresso":
       price = price + 2.50
@@ -41,7 +42,8 @@ coffee_type()
 
 #velge hvor stor kafen skal være
 def coffee_size():
-   Size = input("What size of coffee would you like?")
+   global price
+   Size = input("What size of coffee would you like?").title()
    if Size=="M":
       price = price + 0
    elif Size=="L":
@@ -51,11 +53,12 @@ def coffee_size():
    else:
       print("Invalid option. Please select a type of coffee from the menu.")
       coffee_size()
-   coffee_size()
+coffee_size()
 
 #hvor de vil være
 def coffee_takeaway():
-   place = input("Do you want take away?")
+   global price
+   place = input("Do you want take away?").title()
    if place=="No":
       price = price + 0
    elif place=="Yes":
@@ -63,7 +66,7 @@ def coffee_takeaway():
    else:
       print("Invalid option. Please select a type of coffee from the menu.")
       coffee_takeaway()
-   coffee_takeaway()
+coffee_takeaway()
 
 #Complete the code here...
 print("----------------------------")
